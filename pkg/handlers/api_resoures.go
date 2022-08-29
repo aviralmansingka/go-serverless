@@ -14,5 +14,5 @@ func apiResponse(status int, body interface{}) (*events.APIGatewayProxyResponse,
 
 	stringBody, _ := json.Marshal(body)
 	resp.Body = string(stringBody)
-	return nil, nil
+	return &resp, nil
 }
